@@ -3,47 +3,63 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Expense Tracker</title>
+
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont;
+      font-family: -apple-system;
       padding: 20px;
     }
-    input, select, button {
+    button, input, select {
       width: 100%;
       padding: 12px;
       margin: 8px 0;
       font-size: 16px;
     }
-    button {
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 8px;
+    .tab {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .tab-buttons button {
+      width: 48%;
     }
   </style>
 </head>
+
 <body>
 
-  <h2>Add Transaction</h2>
+  <div class="tab-buttons">
+    <button onclick="showTab('transaction')">Add Expense</button>
+    <button onclick="showTab('category')">Add Category</button>
+  </div>
 
-  <input id="amount" type="number" placeholder="Amount">
+  <!-- TRANSACTION TAB -->
+  <div id="transaction" class="tab active">
+    <h3>Add Transaction</h3>
 
-  <select id="type">
-    <option value="Expense">Expense</option>
-    <option value="Income">Income</option>
-  </select>
+    <input id="amount" type="number" placeholder="Amount">
 
-  <select id="category">
-    <option>Food</option>
-    <option>Travel</option>
-    <option>Personal</option>
-    <option>Office</option>
-    <option>Other</option>
-  </select>
+    <select id="type">
+      <option>Expense</option>
+      <option>Income</option>
+    </select>
 
-  <input id="note" placeholder="Note (optional)">
+    <select id="category"></select>
 
-  <button onclick="save()">Save</button>
+    <input id="note" placeholder="Note (optional)">
+
+    <button onclick="saveTransaction()">Save</button>
+  </div>
+
+  <!-- CATEGORY TAB -->
+  <div id="categoryTab" class="tab">
+    <h3>Add Category</h3>
+
+    <input id="newCategory" placeholder="Category name">
+
+    <button onclick="saveCategory()">Add Category</button>
+  </div>
 
   <script src="app.js"></script>
 </body>
