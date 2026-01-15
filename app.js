@@ -75,4 +75,15 @@ function showTab(tab) {
   }
 }
 
+function testSummary() {
+  fetch(API_URL, {
+    method: "POST",
+    body: JSON.stringify({ action: "getSummary" })
+  })
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("summaryOutput").textContent = data;
+    });
+}
+
 loadCategories();
