@@ -61,4 +61,18 @@ function saveCategory() {
   });
 }
 
+function showTab(tab) {
+  document.getElementById("transaction").classList.remove("active");
+  document.getElementById("categoryTab").classList.remove("active");
+  document.getElementById("chartsTab").classList.remove("active");
+
+  if (tab === "transaction") {
+    document.getElementById("transaction").classList.add("active");
+  } else if (tab === "category") {
+    document.getElementById("categoryTab").classList.add("active");
+  } else {
+    document.getElementById("chartsTab").classList.add("active");
+  }
+}
+
 loadCategories();
