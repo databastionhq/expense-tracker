@@ -1,5 +1,5 @@
 console.log("NEW APP.JS LOADED");
-const API_URL = "https://script.google.com/macros/s/AKfycbzc9MBVbj0ZmgTcn1f_Fwl1oR78rXSnp-wCD0u9QN6Y_XjESlXX-47o7VNgB4Bx-RzRLQ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwlYOJ4RsGxB3AChK45l8BJ3Ro7toeyBUv7EANcDOqnQz_0eAYEHdzHb6kpFnRWGtBG3g/exec";
 
 function showTab(tab) {
   document.getElementById("transaction").classList.remove("active");
