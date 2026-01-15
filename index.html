@@ -32,6 +32,7 @@
   <div class="tab-buttons">
     <button onclick="showTab('transaction')">Add Expense</button>
     <button onclick="showTab('category')">Add Category</button>
+    <button onclick="showTab('charts')">Charts</button>
   </div>
 
   <!-- TRANSACTION TAB -->
@@ -59,6 +60,15 @@
     <input id="newCategory" placeholder="Category name">
 
     <button onclick="saveCategory()">Add Category</button>
+  </div>
+
+  <!-- CHARTS TAB -->
+  <div id="chartsTab" class="tab">
+    <h3>Expense Summary</h3>
+
+    <p>📊 Category-wise summary (coming soon)</p>
+    <p>📅 Monthly summary (coming soon)</p>
+    <p>📆 Yearly summary (coming soon)</p>
   </div>
 
   <script src="app.js"></script>
